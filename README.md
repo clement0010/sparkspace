@@ -1,4 +1,5 @@
 # SparkSpace
+
 SparkSpace is a social learning app focusing on providing bite-sized video content for everyone.
 
 ## Requirements
@@ -15,6 +16,7 @@ SparkSpace is a social learning app focusing on providing bite-sized video conte
 | `npm run build` | Builds code bundle with production settings (minification, no source maps, etc..) |
 
 ## Configuration
+
 Create a .env file with the following environment variables.
 
 | Variables      | Description                                                                                                                        |
@@ -25,16 +27,20 @@ Create a .env file with the following environment variables.
 | `HUAWEI_AK`    | Huawei Cloud IAM access key                                                                                                        |
 | `HUAWEI_SK`    | Huawei Cloud IAM secret key. Refer to [here](https://support.huaweicloud.com/intl/en-us/clientogw-obs/obs_03_0405.html) to see how |
 
-
 ## Writing Code
 
-1. After cloning the repo, run `npm install` from your project directory. 
+1. After cloning the repo, run `npm install` from your project directory.
 2. You can start the local development server by running `npm run dev`.
 3. Start writing code!
 
 ## Deployment Guide
+
 1. Deploy the server at Huawei Cloud Elastic Computing Server.
 2. You can build the deployment server by running `npm run build`.
 3. Start the deployment server by running `npm run start`.
 4. Remember to expose the `PORT` from Huawei Cloud Virtual Private Network.
-5. Note: Make sure you have `.env` file present in the root folder.
+
+Note: Make sure you have the following files present in the root folder:
+
+- `.env` to configure deployment environment.
+- `agc-apiclient.json` App gallery client api key credential. Click [here](https://developer.huawei.com/consumer/en/doc/development/AppGallery-connect-Guides/agc-get-started-server-0000001058092593#section1778162811430) to see how.
