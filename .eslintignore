@@ -1,0 +1,8 @@
+build
+node_modules
+*.log
+.eslintignore
+.gitignore
+.prettierignore
+.eslintrc.js
+commitlint.config.js

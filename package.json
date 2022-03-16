@@ -1,0 +1,50 @@
+{
+  "devDependencies": {
+    "@commitlint/cli": "^16.2.1",
+    "@commitlint/config-conventional": "^16.2.1",
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.13",
+    "@types/morgan": "^1.9.3",
+    "@types/node": "^17.0.21",
+    "@types/sequelize": "^4.28.11",
+    "@types/validator": "^13.7.1",
+    "@typescript-eslint/eslint-plugin": "^5.14.0",
+    "@typescript-eslint/parser": "^5.14.0",
+    "eslint": "^8.10.0",
+    "eslint-plugin-import": "^2.25.4",
+    "prettier": "^2.5.1",
+    "typescript": "^4.6.2"
+  },
+  "dependencies": {
+    "@agconnect/auth-server": "^1.1.0",
+    "@types/multer": "^1.4.7",
+    "body-parser": "^1.19.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "esdk-obs-nodejs": "^3.21.6",
+    "express": "^4.17.3",
+    "express-validator": "^6.14.0",
+    "helmet": "^5.0.2",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.4",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.17.0"
+  },
+  "name": "sparkspace-dev",
+  "version": "1.0.0",
+  "description": "Sparkspace backend dev",
+  "scripts": {
+    "build": "tsc --build",
+    "start": "node build/index.js",
+    "dev": "nodemon src/index.ts",
+    "check:style:lint": "lint(){ eslint --ext .js,.ts --max-warnings 0 ${1:-'.'}; }; lint",
+    "check:style:format": "prettier --check './**/*'",
+    "fix:style:lint": "fixLint(){ eslint --ext .js,.ts --max-warnings 0 --fix ${1:-'.'}; }; fixLint",
+    "fix:style:format": "prettier --write './**/*'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "main": "dist/index",
+  "typings": "dist/index",
+  "author": "",
+  "license": "ISC"
+}
